@@ -3,39 +3,8 @@ import "whatwg-fetch";
 import React from "react";
 import ReactDOM from "react-dom";
 import * as colors from "d3-scale-chromatic";
-
-function timeout(delay) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => resolve(), delay);
-    });
-}
-
-function parseCsvLine(line) {
-    return line.split(",");
-}
-
-function parseCsv(text) {
-    const rows = text
-        .split("\n")
-        .map(line => line.trim())
-        .filter(line => line)
-        .map(parseCsvLine);
-
-    if (rows.length === 0) {
-        return [];
-    }
-
-    const columns = rows[0];
-    return rows.slice(1).map(row => {
-        const item = {}
-        columns.forEach((column, index) => {
-            if (row.length >= columns.length) {
-                item[column] = row[index];
-            }
-        });
-        return item;
-    });
-}
+import timeout from "./timeout";
+import parseCSV from "./csv";
 
 class Main extends React.Component {
     render() {
@@ -47,10 +16,12 @@ class Main extends React.Component {
         );
     }
 }
+Main.propTypes = { "scores": React.PropTypes.array };
+Main.defaultProps = { "scores": [] };
 
 class Scores extends React.Component {
     render() {
-        var scores = this.props.scores.map(item => {
+        const scores = this.props.scores.map(item => {
             return (
                 <tr className="row item">
                     <td className="cell">{item.name}</td>
@@ -72,6 +43,8 @@ class Scores extends React.Component {
         );
     }
 }
+Scores.propTypes = { "scores": React.PropTypes.array };
+Scores.defaultProps = { "scores": [] };
 
 function render(element, scores=[]) {
     ReactDOM.render(<Main scores={scores} />, element);
@@ -81,7 +54,7 @@ function refresh(element, defaultUrl) {
     const url = location.hash.match(/^#?(.*)$/)[1] || defaultUrl;
     return fetch(url)
         .then(response => response.text())
-        .then(text => parseCsv(text))
+        .then(text => parseCSV(text))
         .then(csv => render(element, csv));
 }
 
@@ -122,11 +95,6 @@ function background(canvas) {
     }, 20);
 
     function redraw() {
-        const now = Date.now();
-        const minAge = bubbles.reduce((result, bubble) => {
-            return Math.min(result, (now - bubble.t) / 1000);
-        }, Infinity);
-
         ctx.fillStyle = "black";
         drawn.forEach(bubble => {
             ctx.fillRect(
@@ -138,7 +106,7 @@ function background(canvas) {
         });
 
         drawn = bubbles.map(bubble => {
-            const dt = (now - bubble.t) / 1000;
+            const dt = (Date.now() - bubble.t) / 1000;
             const z = bubble.z + 0.1 * (Math.sin(dt + bubble.offset) + 1) + dt / 10;
             const x = bubble.x + 700 * dt / Math.pow(bubble.z, 0.8);
 

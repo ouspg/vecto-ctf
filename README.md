@@ -8,7 +8,7 @@ IRC: #vectoura @ ircnet
 
 ##Osa 1. pwnable.kr
 
-[pwnable.kr](http://pwnable.kr/play.php) sivuilta löytyy lukuisia eri tyyppisiä hakkerointitehtäviä.
+[pwnable.kr](http://pwnable.kr/play.php) sivuilta löytyy lukuisia erityyppisiä hakkerointitehtäviä.
 
 Tehtävien vaikeustaso vaihtelee ja jokainen tehtävä on pisteytetty vaikeustason mukaan.
 

@@ -6,13 +6,13 @@ Hacking compo, Vectorama 2016, perjantaina 10.6. klo. 12-24
 
 ##Osa 1. pwnable.kr
 
-[pwnable.kr](http://pwnable.kr/play.php) sivuilta löytyy lukuisia eri tyyppisiä hakkerointi tehtäviä. 
+[pwnable.kr](http://pwnable.kr/play.php) sivuilta löytyy lukuisia eri tyyppisiä hakkerointitehtäviä. 
 
 Tehtävien vaikeustaso vaihtelee ja jokainen tehtävä on pisteytetty vaikeustason mukaan. 
 
 Compon ensimmäisessä osassa tehtävänä on kerätä 10 pistettä, tai ratkaista 4 eri tehtävää.
 
-Ratkaisut voi tulla esittämään compon järjestäjille(paikassa X). Ensimmäisen osan ratkaiseminen
+Ratkaisut voi tulla esittämään compon järjestäjille (paikassa X). Ensimmäisen osan ratkaiseminen
 toimii ilmoittautumisena toiseen osaan, ja lisäksi ensimmäiset 10 saavat palkinnoksi pullon Club-Matea.  
 
 

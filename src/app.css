@@ -1,4 +1,33 @@
 body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
     background: black;
     color: white;
+    font-family: monospace;
+}
+
+.scores {
+    position: relative;
+    width: 100%;
+    background: red;
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+    font-size: 2em;
+}
+
+.scores .row {
+    padding: 5%;
+}
+
+.scores .row.header {
+    background: blue;
+}
+
+.scores .cell {
+    text-align: left;
 }

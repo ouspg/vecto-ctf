@@ -10,7 +10,14 @@ module.exports = {
     "module": {
         "loaders": [
             { "test": /\.css$/, "loader": "style!css" },
-            { "test": /\.js$/, "loader": "babel?presets[]=es2015" }
+            {
+                "test": /\.jsx?$/,
+                "loader": "babel",
+                "exclude": /node_modules/,
+                "query": {
+                    "presets": ["es2015", "react"]
+                }
+            }
         ]
     },
     "devtool": "source-map",
@@ -18,6 +25,11 @@ module.exports = {
         new webpack.optimize.UglifyJsPlugin({
             "compress": {
                 "warnings": false
+            }
+        }),
+        new webpack.DefinePlugin({
+            "process.env": {
+                "NODE_ENV": JSON.stringify("production")
             }
         })
     ]

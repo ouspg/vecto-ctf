@@ -2,6 +2,7 @@ import "./app.css";
 import "whatwg-fetch";
 import React from "react";
 import ReactDOM from "react-dom";
+import * as colors from "d3-scale-chromatic";
 
 function timeout(delay) {
     return new Promise((resolve, reject) => {
@@ -72,32 +73,122 @@ class Scores extends React.Component {
     }
 }
 
-function render(scores=[]) {
-    ReactDOM.render(<Main scores={scores} />, document.getElementById("main"));
+function render(element, scores=[]) {
+    ReactDOM.render(<Main scores={scores} />, element);
 }
 
-function refresh(defaultUrl) {
+function refresh(element, defaultUrl) {
     const url = location.hash.match(/^#?(.*)$/)[1] || defaultUrl;
     return fetch(url)
         .then(response => response.text())
         .then(text => parseCsv(text))
-        .then(csv => render(csv));
+        .then(csv => render(element, csv));
 }
 
-function poll(defaultUrl, interval) {
-    refresh(defaultUrl)
+function poll(element, defaultUrl, interval) {
+    refresh(element, defaultUrl)
         .then(() => timeout(interval))
-        .then(() => poll(defaultUrl, interval));
+        .then(() => poll(element, defaultUrl, interval));
 }
 
-function main(defaultUrl="https://raw.githubusercontent.com/ouspg/vecto-ctf/master/score.csv", interval=5000) {
-    render();
+function main(element, defaultUrl="https://raw.githubusercontent.com/ouspg/vecto-ctf/master/score.csv", interval=5000) {
+    render(element);
 
-    poll(defaultUrl, interval);
+    poll(element, defaultUrl, interval);
 
     window.addEventListener("hashchange", () => {
-        refresh(defaultUrl);
+        refresh(element, defaultUrl);
     });
-};
+}
 
-main();
+function background(canvas) {
+    const ctx = canvas.getContext("2d");
+    const maxR = 40;
+
+    let bubbles = [];
+    let drawn = [];
+    let width = canvas.width;
+    let height = canvas.height;
+
+    setInterval(() => {
+        bubbles.push({
+            "offset": Math.random(),
+            "t": Date.now(),
+            "x": width * Math.random(),
+            "y": height + maxR + 1.8 * maxR * Math.random(),
+            "z": 1.0 + 3 * Math.random(),
+            "color": colors.interpolatePuBuGn(Math.random())
+        });
+    }, 100);
+
+    function redraw() {
+        const now = Date.now();
+        const minAge = bubbles.reduce((result, bubble) => {
+            return Math.min(result, (now - bubble.t) / 1000);
+        }, Infinity);
+
+        drawn.forEach(bubble => {
+            const r = bubble.r;
+            const x = bubble.x - r;
+            const y = bubble.y - r;
+            ctx.clearRect(x - 1, y - 1, 2 * r + 2, 2 * r + 2);
+        });
+
+        drawn = bubbles.map(bubble => {
+            const dt = (now - bubble.t) / 1000;
+            const z = bubble.z + 0.1 * (Math.sin(dt + bubble.offset) + 1) + dt / 10;
+            const y = bubble.y - 70 * dt / Math.pow(bubble.z, 0.8);
+
+            return {
+                "x": bubble.x + 10 * Math.sin(dt * (1 * bubble.offset)) / z,
+                "y": y,
+                "r": maxR / z,
+                "alpha": Math.sqrt(Math.max(y / height, 0.0)) / Math.pow(z, 0.6),
+                "color": bubble.color
+            };
+        });
+
+        ctx.globalCompositeOperation = "screen";
+        drawn.forEach(bubble => {
+            ctx.fillStyle = bubble.color;
+            ctx.globalAlpha = bubble.alpha;
+            ctx.beginPath();
+            ctx.arc(bubble.x, bubble.y, bubble.r, 0, 2 * Math.PI);
+            ctx.closePath();
+            ctx.fill();
+        });
+
+        window.bubbles = bubbles = bubbles.filter((bubble, index) => {
+            const d = drawn[index];
+            return d.y + d.r > 0;
+        });
+    }
+
+    function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+
+        canvas.width = width;
+        canvas.height = height;
+        redraw();
+    }
+
+    function update() {
+        redraw();
+        requestAnimationFrame(update);
+    }
+
+    bubbles.push({
+        "t": Date.now(),
+        "x": 300,
+        "y": 300,
+        "r": 50
+    });
+
+    window.addEventListener("resize", resize);
+    resize();
+    update();
+}
+
+background(document.getElementById("background"));
+main(document.getElementById("main"));

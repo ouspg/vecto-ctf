@@ -87,7 +87,7 @@ function refresh(defaultUrl) {
 function poll(defaultUrl, interval) {
     refresh(defaultUrl)
         .then(() => timeout(interval))
-        .then(() => poll());
+        .then(() => poll(defaultUrl, interval));
 }
 
 function main(defaultUrl="https://raw.githubusercontent.com/ouspg/vecto-ctf/master/score.csv", interval=5000) {

@@ -12,8 +12,9 @@ Saat meihin yhteyden  kolmella tavalla.
  1. Liity IRCnetin kanavalle #vectoura. Huutele vaikka fenris-nickin perään. Vastaamme kun peleiltä ja video-editoinneiltamme ehdimme!
  1. Käy yliopiston standillä ([kuva standistä](kuva.png))
   * Jätä nimesi/nickisi ja konepaikka, etsimme sinut käsiimme perjantaina 12-24 välillä. 
- * Häksöröi läpi Aten ja Mikon järjestämä [kisa](README.md)
+ 1 Häksöröi läpi Aten ja Mikon järjestämä [kisa](README.md)
    * (Tsekkaa myös [Aten haastattelu](https://youtu.be/RScnahkajKw))
  
+# Muuta 
 
- Lyhyt linkki tähän sivuun: http://tinyurl.com/vectoura
+ * Lyhyt linkki tähän sivuun: http://tinyurl.com/vectoura

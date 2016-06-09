@@ -114,12 +114,12 @@ function background(canvas) {
         bubbles.push({
             "offset": Math.random(),
             "t": Date.now(),
-            "x": width * Math.random(),
-            "y": height + maxR + 1.8 * maxR * Math.random(),
+            "x": -maxR,
+            "y": height * Math.random(),
             "z": 1.0 + 3 * Math.random(),
             "color": colors.interpolatePuBuGn(Math.random())
         });
-    }, 50);
+    }, 20);
 
     function redraw() {
         const now = Date.now();
@@ -140,13 +140,13 @@ function background(canvas) {
         drawn = bubbles.map(bubble => {
             const dt = (now - bubble.t) / 1000;
             const z = bubble.z + 0.1 * (Math.sin(dt + bubble.offset) + 1) + dt / 10;
-            const y = bubble.y - 70 * dt / Math.pow(bubble.z, 0.8);
+            const x = bubble.x + 700 * dt / Math.pow(bubble.z, 0.8);
 
             return {
-                "x": bubble.x + 10 * Math.sin(dt * (1 + bubble.offset) / 2) / z,
-                "y": y,
+                "x": x,
+                "y": bubble.y,
                 "r": maxR / z,
-                "alpha": Math.sqrt(Math.max(y / height, 0.0)) / Math.pow(z, 0.6),
+                "alpha": 1.0 / Math.pow(z, 0.6),
                 "color": bubble.color
             };
         });
@@ -162,7 +162,7 @@ function background(canvas) {
 
         bubbles = bubbles.filter((bubble, index) => {
             const d = drawn[index];
-            return d.y + d.r > 0;
+            return d.x - d.r < width ;
         });
     }
 

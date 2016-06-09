@@ -1,5 +1,7 @@
 # Ura / Harrastejuttelu
 
+[Mainosvideo YouTubessa](https://www.youtube.com/watch?v=W3yh01klbLA)
+
  * Harrasteletko tietotekniikan parissa? Kiinnostaako esim. tietoturva? 
  * Juttele 20 vuotta alalla olleiden harrastajien, tutkijoiden ja työelämän kehäkettkujen kanssa!
  * Luvassa harraste/opiskelu/työvinkkejä ja *Club Mate*a, joka on Oulussa hyvin ekslusiivinen tuote tällä hetkellä (tyhjensimme Oulun kaupat ja raahasimme pullot Vectoille). 

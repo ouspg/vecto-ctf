@@ -21,22 +21,32 @@ toimii ilmoittautumisena toiseen osaan, ja lisäksi ensimmäiset 10 saavat palki
 [ctf.vectorama.fi](ctf.vectorama.fi) palvelimelle on pystytetty kolme hakkeroitavuudeltaan eri tasoista web applikaatiota.
 
 [ctf.vectorama.fi:80](ctf.vectorama.fi:80): 
+	
 	* Vaikeusaste: Helppo
 
 [ctf.vectorama.fi:81](ctf.vectorama.fi:81): 
+	
 	* Vaikeusaste: Keskitaso
 
 [ctf.vectorama.fi:82](ctf.vectorama.fi:82): 
+	
 	* Vaikeusaste: Vaikea
 
 Jokaisessa applikaatiossa on 6 erillaista haavoittuvuutta:( Ja mahdollisesti muitakin. ;) ) 
 
 Tehtävänäsi on:
+
 	*Brute Force: 
+
 	*Cross-Site-Request-Forgery: 
+	
 	*SQL Injection:
+	
 	*SQL Injection(Blind):
+	
 	*XSS(Cross-Site-Scripting) reflected:
+	
 	*XSS(Cross-Site-Scripting) stored:
+
 
  [OUSPG-open](https://github.com/ouspg/ouspg-open)

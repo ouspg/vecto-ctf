@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "prebuild": "rm -rf build && mkdir build",
-    "build": "npm run prebuild && webpack"
+    "build": "rm -rf build && mkdir build && webpack",
+    "start": "webpack-dev-server --inline"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,12 @@
   },
   "homepage": "https://github.com/ouspg/vecto-ctf#readme",
   "devDependencies": {
-    "webpack": "^1.13.1"
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }

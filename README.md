@@ -1,2 +1,0 @@
-# vecto-ctf
-vecto-ctf

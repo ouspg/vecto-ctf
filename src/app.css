@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
+
 body {
     position: relative;
     width: 100%;
@@ -7,7 +9,7 @@ body {
     border: none;
     background: black;
     color: white;
-    font-family: monospace;
+    font-family: "Roboto Mono",monospace;
 }
 
 #background {
@@ -17,6 +19,12 @@ body {
     right: 0;
     bottom: 0;
     opacity: 0.8;
+    z-index: -1;
+}
+
+.heading {
+    font-size: 4em;
+    padding: 0.1em 0.75em;
 }
 
 .scores {
@@ -39,4 +47,5 @@ body {
 
 .scores .cell {
     text-align: left;
+    padding: 0.33em 1.5em;
 }

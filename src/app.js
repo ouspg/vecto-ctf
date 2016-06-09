@@ -41,7 +41,7 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <h1>Pisteet</h1>
+                <h1 className="heading">Pisteet</h1>
                 <Scores scores={this.props.scores} />
             </div>
         );
@@ -103,7 +103,7 @@ function main(element, defaultUrl="https://raw.githubusercontent.com/ouspg/vecto
 
 function background(canvas) {
     const ctx = canvas.getContext("2d");
-    const maxR = 40;
+    const maxR = 20;
 
     let bubbles = [];
     let drawn = [];
@@ -119,7 +119,7 @@ function background(canvas) {
             "z": 1.0 + 3 * Math.random(),
             "color": colors.interpolatePuBuGn(Math.random())
         });
-    }, 100);
+    }, 50);
 
     function redraw() {
         const now = Date.now();
@@ -127,11 +127,14 @@ function background(canvas) {
             return Math.min(result, (now - bubble.t) / 1000);
         }, Infinity);
 
+        ctx.fillStyle = "black";
         drawn.forEach(bubble => {
-            const r = bubble.r;
-            const x = bubble.x - r;
-            const y = bubble.y - r;
-            ctx.clearRect(x - 1, y - 1, 2 * r + 2, 2 * r + 2);
+            ctx.fillRect(
+                Math.floor(bubble.x - bubble.r),
+                Math.floor(bubble.y - bubble.r),
+                Math.ceil(2 * bubble.r + 1),
+                Math.ceil(2 * bubble.r + 2)
+            );
         });
 
         drawn = bubbles.map(bubble => {
@@ -140,7 +143,7 @@ function background(canvas) {
             const y = bubble.y - 70 * dt / Math.pow(bubble.z, 0.8);
 
             return {
-                "x": bubble.x + 10 * Math.sin(dt * (1 * bubble.offset)) / z,
+                "x": bubble.x + 10 * Math.sin(dt * (1 + bubble.offset) / 2) / z,
                 "y": y,
                 "r": maxR / z,
                 "alpha": Math.sqrt(Math.max(y / height, 0.0)) / Math.pow(z, 0.6),
@@ -148,17 +151,16 @@ function background(canvas) {
             };
         });
 
+        ctx.save();
         ctx.globalCompositeOperation = "screen";
         drawn.forEach(bubble => {
             ctx.fillStyle = bubble.color;
             ctx.globalAlpha = bubble.alpha;
-            ctx.beginPath();
-            ctx.arc(bubble.x, bubble.y, bubble.r, 0, 2 * Math.PI);
-            ctx.closePath();
-            ctx.fill();
+            ctx.fillRect(bubble.x - bubble.r, bubble.y - bubble.r, 2 * bubble.r, 2 * bubble.r);
         });
+        ctx.restore();
 
-        window.bubbles = bubbles = bubbles.filter((bubble, index) => {
+        bubbles = bubbles.filter((bubble, index) => {
             const d = drawn[index];
             return d.y + d.r > 0;
         });

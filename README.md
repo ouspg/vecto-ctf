@@ -34,13 +34,11 @@ toimii ilmoittautumisena toiseen osaan, ja lisäksi ensimmäiset 10 saavat palki
 
 Jokaisessa applikaatiossa on 6 erillaista haavoittuvuutta:( Ja mahdollisesti muitakin. ;) ) 
 
-Tehtävänäsi on:
+Palautettavana:
 
 	*Brute Force: 
-
-	*Cross-Site-Request-Forgery: 
 	
-	*SQL Injection:
+	*SQL Injection:  
 	
 	*SQL Injection(Blind):
 	

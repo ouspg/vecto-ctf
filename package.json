@@ -1,0 +1,23 @@
+{
+  "name": "vecto-ctf",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "prebuild": "rm -rf build && mkdir build",
+    "build": "npm run prebuild && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ouspg/vecto-ctf.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ouspg/vecto-ctf/issues"
+  },
+  "homepage": "https://github.com/ouspg/vecto-ctf#readme",
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
+}

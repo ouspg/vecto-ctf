@@ -5,6 +5,7 @@ import ReactDOM from "react-dom";
 import * as colors from "d3-scale-chromatic";
 import timeout from "./timeout";
 import parseCSV from "./csv";
+import url from "url";
 
 class Main extends React.Component {
     render() {
@@ -51,8 +52,10 @@ function render(element, scores=[]) {
 }
 
 function refresh(element, defaultUrl) {
-    const url = location.hash.match(/^#?(.*)$/)[1] || defaultUrl;
-    return fetch(url)
+    const parsed = url.parse(location.hash.match(/^#?(.*)$/)[1] || defaultUrl, true);
+    parsed.query._ = "" + Date.now();
+
+    return fetch(url.format(parsed))
         .then(response => response.text())
         .then(text => parseCSV(text))
         .then(csv => render(element, csv));

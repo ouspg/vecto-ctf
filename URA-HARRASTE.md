@@ -16,4 +16,4 @@ Saat meihin yhteyden  kolmella tavalla.
    * (Tsekkaa myös [Aten haastattelu](https://youtu.be/RScnahkajKw))
  
 
- 
+ Lyhyt linkki tähän sivuun: http://tinyurl.com/vectoura

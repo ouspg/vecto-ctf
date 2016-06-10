@@ -9,7 +9,7 @@
  * Käy yliopiston standillä ([kuva standistä](kuva.png)) 
   * Jätä nimesi/nickisi ja konepaikka, etsimme sinut käsiimme perjantaina 12-24 välillä. 
  
-# Capture the Raspberry Pi
+# Compo: Capture the Raspberry Pi
  
 Häksöröi läpi Aten ja Mikon järjestämä [CTF-kisa](README.md)
    * (Tsekkaa myöhemmin myös tarina [Aten urakehityksestä](https://youtu.be/RScnahkajKw))

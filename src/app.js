@@ -20,9 +20,39 @@ class Main extends React.Component {
 Main.propTypes = { "scores": React.PropTypes.array };
 Main.defaultProps = { "scores": [] };
 
+function parseScore(string) {
+    const normalized = (string || "").replace(/\s/g, "");
+    const number = Number(normalized);
+    if (normalized && !isNaN(number)) {
+        return [0, number];
+    }
+    return [1, string];
+}
+
+function cmp(left, right) {
+    if (left === right) {
+        return 0;
+    } else if (left < right) {
+        return -1;
+    } else if (left > right) {
+        return 1;
+    }
+    return 0;
+}
+
+function cmpScore(left, right) {
+    const leftScore = parseScore(left.score);
+    const rightScore = parseScore(right.score);
+    return cmp(leftScore[0], rightScore[0]) || -cmp(leftScore[1], rightScore[1]);
+}
+
+function sortedScores(scores) {
+    return scores.slice().sort(cmpScore);
+}
+
 class Scores extends React.Component {
     render() {
-        const scores = this.props.scores.map(item => {
+        const scores = sortedScores(this.props.scores).map(item => {
             return (
                 <tr className="row item">
                     <td className="cell">{item.name}</td>

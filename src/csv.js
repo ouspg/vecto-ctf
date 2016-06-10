@@ -17,7 +17,7 @@ export default function(text) {
     return rows.slice(1).map(row => {
         const item = {};
         columns.forEach((column, index) => {
-            if (row.length >= columns.length) {
+            if (index < row.length) {
                 item[column] = row[index];
             }
         });

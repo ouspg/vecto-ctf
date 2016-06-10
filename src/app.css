@@ -48,7 +48,12 @@ body {
     background: rgba(0, 200, 180, 0.2);
 }
 
+.scores .row.item:nth-child(n+5) {
+    opacity: 0.75;
+}
+
 .scores .cell {
     text-align: left;
     padding: 0.33em 2em;
+    padding-right: 0;
 }

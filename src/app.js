@@ -52,9 +52,10 @@ function sortedScores(scores) {
 
 class Scores extends React.Component {
     render() {
-        const scores = sortedScores(this.props.scores).map(item => {
+        const scores = sortedScores(this.props.scores).map((item, index) => {
             return (
                 <tr className="row item">
+                    <td className="cell">#{index + 1}</td>
                     <td className="cell">{item.name}</td>
                     <td className="cell">{item.location}</td>
                     <td className="cell">{item.score}</td>
@@ -65,6 +66,7 @@ class Scores extends React.Component {
         return (
             <table className="scores">
                 <tr className="row header">
+                    <th className="cell">&nbsp;</th>
                     <th className="cell">Nimi</th>
                     <th className="cell">Pöytäpaikka</th>
                     <th className="cell">Pisteet</th>

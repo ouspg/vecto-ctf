@@ -29,11 +29,8 @@ Ensimmäisen osan ratkaiseminen toimii ilmoittautumisena toiseen osaan, ja lisä
 [ctf.vectorama.fi](http://ctf.vectorama.fi) palvelimelle on pystytetty kolme hakkeroitavuudeltaan eri tasoista web applikaatiota.
 
 login:
-
-user: admin
-
-password: password
-
+ * user: admin
+ * password: password
 
 [ctf.vectorama.fi:80](http://ctf.vectorama.fi:80):
 
@@ -71,7 +68,7 @@ Pisteisiin vaikuttaa applikaation vaikeustaso ja hyökkäyksen kekseliäisyys, o
 
 Pisteitä voi seurata osoitteessa: [vecto-ctf](https://ouspg.github.io/vecto-ctf/)
 
-Compossa kaksi sarjaa: "ammattilaiset" ja "harrastelijat"
+Compossa kaksi sarjaa:
 
  * "ammattilaiset" == Alan työkokemusta omaavat ja/tai Kapsi ry ja/tai JK ry aktiivit.
  * "harrastelijat" == Me muut :)

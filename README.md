@@ -5,6 +5,7 @@
 Hacking compo, Vectorama 2016, perjantaina 10.6. klo. 12-24
 
 IRC: #vectoura @ ircnet
+Standi: [Oulu ICT Show Room](https://github.com/ouspg/vecto-ctf/blob/master/compo.png)
 
 ##Osa 1. pwnable.kr
 
@@ -14,8 +15,11 @@ Tehtävien vaikeustaso vaihtelee ja jokainen tehtävä on pisteytetty vaikeustas
 
 Compon ensimmäisessä osassa tehtävänä on kerätä 10 pistettä, tai ratkaista 4 eri tehtävää.
 
-Ratkaisut voi tulla esittämään compon järjestäjille Oulun Yliopiston [standille](), tai #vectoura @ ircnet. Ensimmäisen osan ratkaiseminen
-toimii ilmoittautumisena toiseen osaan, ja lisäksi ensimmäiset 10 saavat palkinnoksi pullon Club-Matea.  
+Ratkaisut voi tulla esittämään compon järjestäjille: 
+	*Oulu ICT Show Room [standille](https://github.com/ouspg/vecto-ctf/blob/master/compo.png)
+	*#vectoura @ ircnet. 
+
+Ensimmäisen osan ratkaiseminen toimii ilmoittautumisena toiseen osaan, ja lisäksi ensimmäiset 10 saavat palkinnoksi pullon Club Matea/Smoothien.  
 
 
 ##Osa 2. Web Application Hacking
@@ -64,7 +68,7 @@ Compossa kaksi sarjaa: "ammattilaiset" ja "harrastelijat"
 
 Eniten pisteitä keränneelle palkinnoksi: 
 	ammattilaiset: *Fame*, Club Matea ja terapiaseuraa
-	harrastelijat: *Fame*, Raspberry Pi 3 model B, Club Matea ja kutsu [OUSPG-open](https://github.com/ouspg/ouspg-open) puhujavieraaksi.
+	harrastelijat: *Fame*, Raspberry Pi 3 model B, Club Matea/Smoothie ja kutsu [OUSPG-open](https://github.com/ouspg/ouspg-open) puhujavieraaksi.
 
 Koska kyseessä on haavoittuvaiset web applikaatiot, joihin hyökätään, saattavat ne aina välillä olla jumissa/kaatuneena.
 Ongelmista voi ilmoittaa järjestäjille henk.koht., tai hihkaista IRC:ssä.

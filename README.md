@@ -24,17 +24,17 @@ Ensimmäisen osan ratkaiseminen toimii ilmoittautumisena toiseen osaan, ja lisä
 
 ##Osa 2. Web Application Hacking
 
-[ctf.vectorama.fi](ctf.vectorama.fi) palvelimelle on pystytetty kolme hakkeroitavuudeltaan eri tasoista web applikaatiota.
+[ctf.vectorama.fi](http://ctf.vectorama.fi) palvelimelle on pystytetty kolme hakkeroitavuudeltaan eri tasoista web applikaatiota.
 
-[ctf.vectorama.fi:80](ctf.vectorama.fi:80):
+[ctf.vectorama.fi:80](http://ctf.vectorama.fi:80):
 
 	* Vaikeusaste: Helppo
 
-[ctf.vectorama.fi:81](ctf.vectorama.fi:81):
+[ctf.vectorama.fi:81](http://ctf.vectorama.fi:81):
 
 	* Vaikeusaste: Keskitaso
 
-[ctf.vectorama.fi:82](ctf.vectorama.fi:82):
+[ctf.vectorama.fi:82](http://ctf.vectorama.fi:82):
 
 	* Vaikeusaste: Vaikea
 

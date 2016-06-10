@@ -14,7 +14,7 @@ Tehtävien vaikeustaso vaihtelee ja jokainen tehtävä on pisteytetty vaikeustas
 
 Compon ensimmäisessä osassa tehtävänä on kerätä 10 pistettä, tai ratkaista 4 eri tehtävää.
 
-Ratkaisut voi tulla esittämään compon järjestäjille (paikassa X). Ensimmäisen osan ratkaiseminen
+Ratkaisut voi tulla esittämään compon järjestäjille Oulun Yliopiston [standille](), tai #vectoura @ ircnet. Ensimmäisen osan ratkaiseminen
 toimii ilmoittautumisena toiseen osaan, ja lisäksi ensimmäiset 10 saavat palkinnoksi pullon Club-Matea.  
 
 
@@ -34,7 +34,7 @@ toimii ilmoittautumisena toiseen osaan, ja lisäksi ensimmäiset 10 saavat palki
 
 	* Vaikeusaste: Vaikea
 
-Jokaisessa applikaatiossa on 6 erillaista haavoittuvuutta:( Ja mahdollisesti muitakin. ;) )
+Jokaisessa applikaatiossa on 5 erillaista haavoittuvuutta:( Ja mahdollisesti muitakin. ;) )
 
 Esimerkkejä:
 
@@ -56,9 +56,15 @@ Pisteitä saa esittelemällä järjestäjille erityyppisiä hyökkäyksiä mitä
 
 Pisteisiin vaikuttaa applikaation vaikeustaso ja hyökkäyksen kekseliäisyys, omaperäisyys ja vaikeus. 
 
-Pisteitä voi seurata osoitteessa: Z
+Pisteitä voi seurata osoitteessa: [vecto-ctf](https://ouspg.github.io/vecto-ctf/)
+
+Compossa kaksi sarjaa: "ammattilaiset" ja "harrastelijat"
+
+"ammattilaiset" == Alan työkokemusta omaavat ja/tai Kapsi ry ja/tai JK ry aktiivit.
+
+Eniten pisteitä keränneelle palkinnoksi: 
+	ammattilaiset: *Fame*, Club Matea ja terapiaseuraa
+	harrastelijat: *Fame*, Raspberry Pi 3 model B, Club Matea ja kutsu [OUSPG-open](https://github.com/ouspg/ouspg-open) puhujavieraaksi.
 
 Koska kyseessä on haavoittuvaiset web applikaatiot, joihin hyökätään, saattavat ne aina välillä olla jumissa/kaatuneena.
 Ongelmista voi ilmoittaa järjestäjille henk.koht., tai hihkaista IRC:ssä.
-
-[OUSPG-open](https://github.com/ouspg/ouspg-open)

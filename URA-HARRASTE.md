@@ -1,3 +1,8 @@
+# Compo: Capture the Raspberry Pi
+ 
+Häksöröi läpi Aten ja Mikon järjestämä CTF-kisa! Ohjeet [täällä](README.md).
+   * (Tsekkaa myöhemmin myös tarina [Aten urakehityksestä](https://youtu.be/RScnahkajKw))
+
 # Ura / Harrastejuttelu
 
 [Mainosvideo YouTubessa](https://www.youtube.com/watch?v=W3yh01klbLA)
@@ -9,10 +14,7 @@
  * Käy yliopiston standillä ([kuva standistä](kuva.png)) 
   * Jätä nimesi/nickisi ja konepaikka, etsimme sinut käsiimme perjantaina 12-24 välillä. 
  
-# Compo: Capture the Raspberry Pi
- 
-Häksöröi läpi Aten ja Mikon järjestämä [CTF-kisa](README.md)
-   * (Tsekkaa myöhemmin myös tarina [Aten urakehityksestä](https://youtu.be/RScnahkajKw))
+
  
 # Muuta 
 

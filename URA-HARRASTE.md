@@ -1,11 +1,12 @@
 # Compo: Capture the Raspberry Pi
+
+[Mainosvideo YouTubessa](https://www.youtube.com/watch?v=W3yh01klbLA)
  
 Häksöröi läpi Aten ja Mikon järjestämä CTF-kisa! Ohjeet [täällä](README.md).
    * (Tsekkaa myöhemmin myös tarina [Aten urakehityksestä](https://youtu.be/RScnahkajKw))
 
 # Ura / Harrastejuttelu
 
-[Mainosvideo YouTubessa](https://www.youtube.com/watch?v=W3yh01klbLA)
 
  * Harrasteletko tietotekniikan parissa? Kiinnostaako esim. tietoturva? 
  * Juttele 20 vuotta alalla olleiden harrastajien, tutkijoiden ja työelämän kehäkettkujen kanssa!

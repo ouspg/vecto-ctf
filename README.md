@@ -55,7 +55,7 @@ Esimerkkejä:
   * Hanki SQL-injektiota hyödyntäen käyttäjien salasanojen MD5 hashit
   * Plussaa tulee jos saa niistä käyttäjien salasanat hankittua
  * SQL Injection(Blind):
-  * ...
+  * Hankia tietokantojen nimet palvelimelta. Lisäpisteitä jos saa jotain muuta tietoa kaivettua.
  * XSS(Cross-Site-Scripting) reflected:
   * XSS haavoittuvuutta hyödyntäen, injektoi sivulle omaa HTML-koodia.
   * Huom: Selain saattaa estää tietynlaisen sisällön injektion.

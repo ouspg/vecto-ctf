@@ -11,7 +11,7 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <h1 className="heading">Pisteet</h1>
+                <h1 className="heading">'); DROP TABLE scores; --</h1>
                 <Scores scores={this.props.scores} />
             </div>
         );

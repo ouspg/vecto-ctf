@@ -26,6 +26,12 @@ Ensimmäisen osan ratkaiseminen toimii ilmoittautumisena toiseen osaan, ja lisä
 
 [ctf.vectorama.fi](http://ctf.vectorama.fi) palvelimelle on pystytetty kolme hakkeroitavuudeltaan eri tasoista web applikaatiota.
 
+login:
+
+user: admin
+password: password
+
+
 [ctf.vectorama.fi:80](http://ctf.vectorama.fi:80):
 
 	* Vaikeusaste: Helppo
